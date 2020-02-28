@@ -1,0 +1,16 @@
+name: Example
+on: ["push"]
+jobs:
+  build:
+    name: Cache
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Select Xcode 11.3.1
+        run: sudo xcode-select -switch /Applications/Xcode_11.3.1.app
+      - name: Install Tuist
+        run: |
+          bash <(curl -Ls https://install.tuist.io)
+      - name: Cache frameworks
+        run: |
+          tuist cache
