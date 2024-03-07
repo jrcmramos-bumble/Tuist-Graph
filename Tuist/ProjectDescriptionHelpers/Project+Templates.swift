@@ -40,4 +40,25 @@ extension Project {
                       ])
     }
 
+    public static func frameworkWithoutTests(name: String, platform: Platform, dependencies: [TargetDependency] = []) -> Project {
+        return self.projectWithoutTests(name: name, product: .framework, platform: platform, dependencies: dependencies)
+    }
+
+    public static func projectWithoutTests(name: String,
+                                           product: Product,
+                                           platform: Platform,
+                                           dependencies: [TargetDependency] = [],
+                                           infoPlist: [String: InfoPlist.Value] = [:]) -> Project {
+        return Project(name: name,
+                       targets: [
+                        Target(name: name,
+                               platform: platform,
+                               product: product,
+                               bundleId: "io.tuist.\(name)",
+                               infoPlist: .extendingDefault(with: infoPlist),
+                               sources: ["Sources/**"],
+                               resources: [],
+                               dependencies: dependencies),
+                       ])
+    }
 }

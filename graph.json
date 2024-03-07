@@ -1,0 +1,102 @@
+{
+  "name" : "Example",
+  "path" : "/Users/josecorreiamirandaramos/workspace/project/example",
+  "projects" : {
+    "/Users/josecorreiamirandaramos/workspace/project/example/Projects/Example" : {
+      "isExternal" : false,
+      "name" : "Example",
+      "packages" : [
+
+      ],
+      "path" : "/Users/josecorreiamirandaramos/workspace/project/example/Projects/Example",
+      "schemes" : [
+
+      ],
+      "targets" : [
+        {
+          "dependencies" : [
+            {
+              "project" : {
+                "path" : "/Users/josecorreiamirandaramos/workspace/project/example/Projects/ExampleKit",
+                "target" : "ExampleKit"
+              }
+            }
+          ],
+          "name" : "Example",
+          "product" : "app",
+          "resources" : [
+
+          ],
+          "sources" : [
+            "/Users/josecorreiamirandaramos/workspace/project/example/Projects/Example/Sources/AppDelegate.swift"
+          ]
+        },
+        {
+          "dependencies" : [
+            {
+              "target" : {
+                "name" : "Example"
+              }
+            }
+          ],
+          "name" : "ExampleTests",
+          "product" : "unit_tests",
+          "resources" : [
+
+          ],
+          "sources" : [
+            "/Users/josecorreiamirandaramos/workspace/project/example/Projects/Example/Tests/ExampleTests.swift"
+          ]
+        }
+      ]
+    },
+    "/Users/josecorreiamirandaramos/workspace/project/example/Projects/ExampleKit" : {
+      "isExternal" : false,
+      "name" : "ExampleKit",
+      "packages" : [
+
+      ],
+      "path" : "/Users/josecorreiamirandaramos/workspace/project/example/Projects/ExampleKit",
+      "schemes" : [
+
+      ],
+      "targets" : [
+        {
+          "dependencies" : [
+            {
+              "project" : {
+                "path" : "/Users/josecorreiamirandaramos/workspace/project/example/Projects/ExampleSupport",
+                "target" : "ExampleSupport"
+              }
+            }
+          ],
+          "name" : "ExampleKit",
+          "product" : "framework",
+          "resources" : [
+
+          ],
+          "sources" : [
+            "/Users/josecorreiamirandaramos/workspace/project/example/Projects/ExampleKit/Sources/ExampleKit.swift"
+          ]
+        },
+        {
+          "dependencies" : [
+            {
+              "target" : {
+                "name" : "ExampleKit"
+              }
+            }
+          ],
+          "name" : "ExampleKitTests",
+          "product" : "unit_tests",
+          "resources" : [
+
+          ],
+          "sources" : [
+            "/Users/josecorreiamirandaramos/workspace/project/example/Projects/ExampleKit/Tests/ExampleKitTests.swift"
+          ]
+        }
+      ]
+    }
+  }
+}
